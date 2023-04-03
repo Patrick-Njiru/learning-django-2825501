@@ -14,3 +14,7 @@ class Pet(models.Model):
 
 class Vaccine(models.Model):
     name = models.CharField(max_length=50)
+
+    # To display vaccines by their names on Admin page.
+    def __str__(self):
+        return self.name
